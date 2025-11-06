@@ -61,9 +61,21 @@
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             letter-spacing: -1px;
+            animation: logoGlow 3s ease-in-out infinite;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @keyframes logoGlow {
+            0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); }
+            50% { filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8)); }
         }
 
         nav {
@@ -516,7 +528,7 @@
     <div class="bg-animation"></div>
 
     <header>
-        <div class="logo">MEY</div>
+        <a href="index.html" class="logo" style="text-decoration: none; cursor: pointer;">CrazyGames</a>
         <nav>
             <a href="#about">Hakkımda</a>
             <a href="#skills">Yetenekler</a>
