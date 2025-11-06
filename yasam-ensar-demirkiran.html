@@ -341,6 +341,12 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+		.project-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: fill;
+		}
+
         .project-content {
             padding: 32px;
         }
@@ -375,11 +381,13 @@
 
         .project-links {
             display: flex;
-            gap: 12px;
+            justify-content: flex-start;
+			gap: 12px;
+			width: 100%;
         }
 
         .project-link {
-            padding: 10px 20px;
+            padding: 10px 10px;
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 8px;
@@ -388,7 +396,20 @@
             font-size: 14px;
             font-weight: 600;
             transition: all 0.3s ease;
+
+			display: flex;
+			justify-content: start;
+			align-items: center;
+
+			text-align: center;	
         }
+
+		.project-link img {
+			width: 16px;
+			aspect-ratio: 1 / 1	;
+			display: inline-block;
+			margin-right: 5%;
+		}
 
         .project-link:hover {
             background: rgba(255, 255, 255, 0.2);
@@ -590,6 +611,17 @@
                 </div>
             </div>
 
+			<div class="achievement-card">
+                <div class="achievement-medal">🥇</div>
+                <div class="achievement-content">
+                    <h3>Bullet Hell Jam 6</h3>
+                    <p class="achievement-event">Game Jam</p>
+                    <p class="achievement-description">
+                        Üç kişilik bir takım olarak yaptığımız 'Space Cowboy' oyunuyla, itch.io üzerinde düzenlenen Bullet Hell Jam 6'ya katıldık. Oyunun programlamasını ben, tasarımını ve müziğini ise arkadaşlarım Briauna Huffman ve JoelMakesMusic yaptı.
+                    </p>
+                </div>
+            </div>
+
             <div class="achievement-card">
                 <div class="achievement-medal">6️⃣</div>
                 <div class="achievement-content">
@@ -612,11 +644,14 @@
         </div>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image">🎮</div>
+                <div class="project-image"><img src="/src/game-thumbnails/ultra-pong-thumbnail.png" alt="Ultra-Pong! Thumbnail"></div>
                 <div class="project-content">
                     <h3 class="project-title">Ultra-Pong!</h3>
                     <p class="project-description">
                         Ultra-Pong! klasik Pong deneyimini mobil ekranlara taşımayı amaçlayan bir oyun. Geliştirilmiş grafikler, farklı oyun modları ve çeşitli kontrollerle oyuncu karşısına çıkıyor.
+						<br>
+						<br>
+						Oyunda aynı zamanda 20'den fazla başarı içeren bir başarımlar sistemi, ve video reklamlar var.
 						<br>
 						<br>
 						Google Play Store üzerinden oyunu indirebilirsiniz.
@@ -625,16 +660,17 @@
                         <span class="project-tag">Unity</span>
                         <span class="project-tag">C#</span>
                         <span class="project-tag">Android</span>
+                        <span class="project-tag">Casual</span>
                     </div>					
                     <div class="project-links">
-						<a href="https://play.google.com/store/apps/details?id=com.ironbreaker.ultrapong" class="project-link" target="_blank">Play Store</a>
-						<a href="https://www.youtube.com/watch?v=r_2TyZUpG3s" class="project-link" target="_blank">YouTube</a>
-                        <a href="https://github.com/YeDemirkiran/ultra-pong" class="project-link" target="_blank">GitHub</a>
+						<a href="https://play.google.com/store/apps/details?id=com.ironbreaker.ultrapong" class="project-link" target="_blank"><img src="/src/icons/play-store.png" alt="Play Store Logo">Play</a>
+						<a href="https://www.youtube.com/watch?v=r_2TyZUpG3s" class="project-link" target="_blank"><img src="/src/icons/youtube.png" alt="YouTube Logo">YouTube</a>
+                        <a href="https://github.com/YeDemirkiran/ultra-pong" class="project-link" target="_blank"><img src="/src/icons/github.png" alt="GitHub Logo">GitHub</a>
                     </div>
                 </div>
             </div>
 			<div class="project-card">
-                <div class="project-image">💡</div>
+                <div class="project-image"></div>
                 <div class="project-content">
                     <h3 class="project-title">K-9</h3>
                     <p class="project-description">
@@ -651,46 +687,51 @@
                 </div>
             </div>
 			<div class="project-card">
-                <div class="project-image">💡</div>
+                <div class="project-image"><img src="/src/game-thumbnails/space-cowboy-thumbnail.png" alt="Space Cowboy Thumbnail"></div>
                 <div class="project-content">
                     <h3 class="project-title">Space Cowboy</h3>
                     <p class="project-description">
-                        [BURAYA ÜÇÜNCÜ PROJENİN AÇIKLAMASINI EKLE]
+                        Bullet Hell Jam 6 için 3 kişilik bir takımla yaptığımız bullet hell temalı oyun. Uzayda mahkum bir kovboyu oynuyorsunuz ve düşmanlarınızı alt ederek kaçmaya çalışıyorsunuz.
+						<br>
+						<br>
+						Oyunun yazılımını ben, çizimlerini Briauna Huffman, ses efektleri ve müziğini ise JoelMakesMusic yaptı. itch.io üzerinden oynayabilirsiniz.
                     </p>
                     <div class="project-tags">
-                        <span class="project-tag">Tech 1</span>
-                        <span class="project-tag">Tech 2</span>
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">Game Jam</span>
+                        <span class="project-tag">Bullet Hell</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://ironbreaker.itch.io/space-cowboy" class="project-link" target="_blank">itch.io</a>
-                        <a href="#" class="project-link" target="_blank">GitHub</a>
+                        <a href="https://ironbreaker.itch.io/space-cowboy" class="project-link" target="_blank"><img src="/src/icons/itch.png" alt="itch.io Logo">itch.io</a>
+                        <a href="https://github.com/YeDemirkiran/bullet-hell" class="project-link" target="_blank"><img src="/src/icons/github.png" alt="GitHub Logo">GitHub</a>
                     </div>
                 </div>
             </div>
             <!-- Daha fazla proje kartı eklenebilir -->
 			 <div class="project-card">
-                <div class="project-image">🚀</div>
+                <div class="project-image"><img src="/src/game-thumbnails/out-of-jam-thumbnail.png" alt="Out of Jam Thumbnail"></div>
                 <div class="project-content">
                     <h3 class="project-title">Out of Jam</h3>
                     <p class="project-description">
-                        Harena, DMC5 ve MGR:R gibi oyunlardan esinlenmiş 3D bir hack-and-slash oyunudur. Oyun çeşitli bölümler, tehlikeli düşmanlar ve farklı silahları size eğlenceli bir biçimde sunuyor.
+                        Out of Jam, DAGDC GameJam Spring25 için geliştirdiğim bir clicker oyunu. Oyunun amacı size verilen süre içinde oyununuzu geliştirip yayınlamak.
 						<br>
 						<br>
-						Oyunun alpha WebGL sürümü itch.io'dan indirilebilir. Mobil sürümü için çalışmalar sürüyor.
+						Tasarımı, programlaması ve müzikleri dahil her şeyini kendim yaptığım oyun, game jam'da 3. seçildi. Itch.io üzerinden oynayabilirsiniz.
                     </p>
                     <div class="project-tags">
                         <span class="project-tag">Unity</span>
-                        <span class="project-tag">Aseprite</span>
+                        <span class="project-tag">Game Jam</span>
+                        <span class="project-tag">Pixel Art</span>
                         <span class="project-tag">WebGL</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://ironbreaker.itch.io/out-of-jam" class="project-link" target="_blank">itch.io</a>
-                        <a href="https://github.com/YeDemirkiran/arena-slasher" class="project-link" target="_blank">GitHub</a>
+                        <a href="https://ironbreaker.itch.io/out-of-jam" class="project-link" target="_blank"><img src="/src/icons/itch.png" alt="itch.io Logo">itch.io</a>
+                        <a href="https://github.com/YeDemirkiran/out-of-time" class="project-link" target="_blank"><img src="/src/icons/github.png" alt="GitHub Logo">GitHub</a>
                     </div>
                 </div>
             </div>
 			<div class="project-card">
-                <div class="project-image">🚀</div>
+                <div class="project-image"><img src="/src/game-thumbnails/harena-thumbnail.png" alt="Harena Thumbnail"></div>
                 <div class="project-content">
                     <h3 class="project-title">Harena</h3>
                     <p class="project-description">
@@ -702,23 +743,23 @@
                     <div class="project-tags">
                         <span class="project-tag">Unity</span>
                         <span class="project-tag">WebGL</span>
-                        <span class="project-tag">Korku</span>
+                        <span class="project-tag">Hack-and-Slash</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://ironbreaker.itch.io/harena" class="project-link" target="_blank">itch.io</a>
-                        <a href="https://github.com/YeDemirkiran/arena-slasher" class="project-link" target="_blank">GitHub</a>
+                        <a href="https://ironbreaker.itch.io/harena" class="project-link" target="_blank"><img src="/src/icons/itch.png" alt="itch.io Logo">itch.io</a>
+                        <a href="https://github.com/YeDemirkiran/arena-slasher" class="project-link" target="_blank"><img src="/src/icons/github.png" alt="GitHub Logo">GitHub</a>
                     </div>
                 </div>
             </div>	
             <div class="project-card">
-                <div class="project-image">🚀</div>
+                <div class="project-image"><img src="/src/game-thumbnails/that-last-crater-thumbnail.png" alt="That Last Crater Thumbnail"></div>
                 <div class="project-content">
                     <h3 class="project-title">That Last Crater</h3>
                     <p class="project-description">
-                        Harena, DMC5 ve MGR:R gibi oyunlardan esinlenmiş 3D bir hack-and-slash oyunudur. Oyun çeşitli bölümler, tehlikeli düşmanlar ve farklı silahları size eğlenceli bir biçimde sunuyor.
+                        That Last Crater, itch.io üzerinde düzenlenen Paradise Blitz VI Game Jam için geliştirilmiş, ay ve uzay temalı bir korku oyunudur. Oyunda uzay roketi kaza yapmış bir astronotu oynuyoruz ve hapsolduğumuz kraterde canavarlara karşı kendimizi koruyoruz.
 						<br>
 						<br>
-						Oyunun alpha WebGL sürümü itch.io'dan indirilebilir. Mobil sürümü için çalışmalar sürüyor.
+						Oyunun alpha WebGL sürümü itch.io'dan indirilebilir.
                     </p>
                     <div class="project-tags">
                         <span class="project-tag">Unity</span>
@@ -726,8 +767,8 @@
                         <span class="project-tag">Korku</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://ironbreaker.itch.io/that-last-crater" class="project-link" target="_blank">itch.io</a>
-                        <a href="https://github.com/YeDemirkiran/arena-slasher" class="project-link" target="_blank">GitHub</a>
+                        <a href="https://ironbreaker.itch.io/that-last-crater" class="project-link" target="_blank"><img src="/src/icons/itch.png" alt="itch.io Logo">itch.io</a>
+                        <a href="https://github.com/YeDemirkiran/the-moon" class="project-link" target="_blank"><img src="/src/icons/github.png" alt="GitHub Logo">GitHub</a>
                     </div>
                 </div>
             </div>	
