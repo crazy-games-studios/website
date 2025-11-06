@@ -505,7 +505,7 @@
                 <div class="feature-badge">
                     <span id="game-platforms">🎮 Platform: PC, Mobil, Konsol</span>
                 </div>
-                <div class="tags">
+                <div id="game-tags" class="tags">
                     <span class="tag">Aksiyon</span>
                     <span class="tag">Macera</span>
                     <span class="tag">Çok Oyunculu</span>
@@ -600,23 +600,54 @@
     <script>
         const games = [
             {
-                title: "Space Adventure",
-                desc: "Uzayın derinliklerinde geçen epik bir macera! Düşmanları alt edin, gezegenleri keşfedin ve galaksinin kahramanı olun.",
-                features: "✨ Muhteşem grafikler ve akıcı oynanış deneyimi",
-                platforms: "🎮 Platform: PC, Mobil, Konsol"
+                title: "Ultra-Pong!",
+                desc: "Ultra-Pong! sadece bir Pong kopyası değil, klasik arcade oyununun yenilenmiş, yüksek enerjili bir versiyonu! Pürüzsüz modern görseller, güçlü ses efektleri ve yeni mekaniklerle bu, daha önce hiç oynamadığınız bir Pong oyunu.",
+                features: "Modernleştirilmiş Pong Deneyimi",
+                platforms: "Platform: Android",
+				tags: ["Unity", "Android", "Casual"]
             },
             {
-                title: "Medieval Warriors",
-                desc: "Ortaçağ'ın karanlık dünyasında geçen strateji oyunu. Ordunuzu kurun, düşmanları yenin ve krallığınızı genişletin.",
-                features: "⚔️ Gerçekçi savaş mekaniği ve derin strateji",
-                platforms: "🎮 Platform: PC, Konsol"
+                title: "K-9",
+                desc: "Dünyayı ele geçirmeye çalışan zombilere karşı bir savaş robotunu oynayın. Gelişmiş teknolojik silahlar, nefes kesici grafikler ve ses tasarımı.",
+                features: "Gerçekçi savaş mekaniği ve derin strateji",
+                platforms: "Platform: Android",
+				tags: ["Unity", "Android", "Hypercasual"]
+            },
+			{
+                title: "Infestation",
+                desc: "Bu hypercasual oyunda, dünyayı ele geçirmeye çalışan bir uzaylı robotu oynuyorsun. İnsan rakiplerini alt et ve silahlarını geliştirerek hayatta kalmaya çalış. Dünya istilaya hazır mı?",
+                features: "Gerçekçi savaş mekaniği ve derin strateji",
+                platforms: "Platform: Android",
+				tags: ["Unity", "Android", "Hypercasual"]
             },
             {
-                title: "Racing Legends",
-                desc: "Heyecan verici yarışlar ve modifiye edilebilir araçlarla dolu bir yarış deneyimi. Pistlerde rakiplerinizi geride bırakın!",
-                features: "🏎️ 50+ araç ve 30+ farklı pist",
-                platforms: "🎮 Platform: PC, Mobil, Konsol"
-            }
+                title: "Space Cowboy",
+                desc: "Uzaylı bir kovboysun, ve bu tehlikeli gezegende hapsoldun. Daha önce hiç görmediğin uzaylılar seni öldürmekle görevlendirilmişler. Onlardan kurtulup, uzay mekiğine binerek kaçman gerekiyor. Başarabilecek misin?",
+                features: "Gerçekçi savaş mekaniği ve derin strateji",
+                platforms: "Platform: WebGL",
+				tags: ["Unity", "WebGL", "Bullet Hell"]
+            },
+			{
+                title: "Out of Jam",
+                desc: "Bir game jam'e katılmaya ve kendi oyununu yapmaya hazır mısın? Out of Jam'de sana verilen sürede oyununu hazırla ve jürilere sun: Kaçıncı olacağını onlar belirleyecek.",
+                features: "Gerçekçi savaş mekaniği ve derin strateji",
+                platforms: "Platform: Android",
+				tags: ["Unity", "Android", "Hypercasual"]
+            },
+			{
+                title: "Harena",
+                desc: "",
+                features: "Gerçekçi savaş mekaniği ve derin strateji",
+                platforms: "Platform: Android",
+				tags: ["Unity", "Android", "Hypercasual"]
+            },
+			{
+                title: "That Last Crater",
+                desc: "",
+                features: "Gerçekçi savaş mekaniği ve derin strateji",
+                platforms: "Platform: Android",
+				tags: ["Unity", "Android", "Hypercasual"]
+            },
         ];
 
         let currentGameIndex = 0;
@@ -627,6 +658,7 @@
             const desc = document.getElementById('game-desc');
             const features = document.getElementById('game-features');
             const platforms = document.getElementById('game-platforms');
+			const tags = document.getElementById('game-tags');
 
             title.style.opacity = '0';
             desc.style.opacity = '0';
@@ -636,6 +668,14 @@
                 desc.textContent = game.desc;
                 features.textContent = game.features;
                 platforms.textContent = game.platforms;
+
+				tags.innerHTML = '';
+				game.tags.forEach(tagText => {
+					const span = document.createElement('span');
+					span.className = 'tag';
+					span.textContent = tagText;
+					tags.appendChild(span);
+				});
                 
                 title.style.transition = 'opacity 0.5s ease';
                 desc.style.transition = 'opacity 0.5s ease';
@@ -656,7 +696,9 @@
 
         function goToPortfolio(member) {
                 window.open('mustafa-emre-yilmaz.html', '_blank');
-}
+		}		
+
+		updateGame();
     </script>
 </body>
 </html>
