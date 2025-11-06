@@ -514,7 +514,7 @@
 
             <div class="game-showcase">
                 <div class="game-display">
-					<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/r_2TyZUpG3s?si=n-ITR70BTNnCvA2A&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<iframe id="youtube-video" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/r_2TyZUpG3s?si=n-ITR70BTNnCvA2A&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 				</div>
                 <div class="game-nav">
                     <button class="nav-btn" onclick="previousGame()">◀</button>
@@ -602,49 +602,56 @@
                 desc: "Ultra-Pong! sadece bir Pong kopyası değil, klasik arcade oyununun yenilenmiş, yüksek enerjili bir versiyonu! Pürüzsüz modern görseller, güçlü ses efektleri ve yeni mekaniklerle bu, daha önce hiç oynamadığınız bir Pong oyunu.",
                 features: "Modernleştirilmiş Pong Deneyimi",
                 platforms: "Platform: Google Play Store",
-				tags: ["Unity", "Android", "Play Store", "Casual"]
+				tags: ["Unity", "Android", "Play Store", "Casual"],
+				youtube_link: "https://www.youtube-nocookie.com/embed/r_2TyZUpG3s?si=n-ITR70BTNnCvA2A&amp;controls=0",
             },
             {
                 title: "K-9",
                 desc: "Dünyayı ele geçirmeye çalışan zombilere karşı bir savaş robotunu oynayın. Gelişmiş teknolojik silahlar, nefes kesici grafikler ve ses tasarımı.",
                 features: "Gerçekçi savaş mekaniği ve derin strateji",
                 platforms: "Platform: Android",
-				tags: ["Unity", "Android", "Hypercasual"]
+				tags: ["Unity", "Android", "Hypercasual"],
+				youtube_link: "",
             },
 			{
                 title: "Infestation",
                 desc: "Bu hypercasual oyunda, dünyayı ele geçirmeye çalışan bir uzaylı robotu oynuyorsun. İnsan rakiplerini alt et ve silahlarını geliştirerek hayatta kalmaya çalış. Dünya istilaya hazır mı?",
                 features: "Gerçekçi savaş mekaniği ve derin strateji",
                 platforms: "Platform: Android",
-				tags: ["Unity", "Android", "Hypercasual"]
+				tags: ["Unity", "Android", "Hypercasual"],
+				youtube_link: "https://www.youtube-nocookie.com/embed/jFlxbPUdfYw?si=mCTdz3vaUj3OIHWh&amp;controls=0",
             },
             {
                 title: "Space Cowboy",
                 desc: "Uzaylı bir kovboysun, ve bu tehlikeli gezegende hapsoldun. Daha önce hiç görmediğin uzaylılar seni öldürmekle görevlendirilmişler. Onlardan kurtulup, uzay mekiğine binerek kaçman gerekiyor. Başarabilecek misin?",
                 features: "Gerçekçi savaş mekaniği ve derin strateji",
                 platforms: "Platform: WebGL",
-				tags: ["Unity", "WebGL", "Bullet Hell"]
+				tags: ["Unity", "WebGL", "Bullet Hell"],
+				youtube_link: "https://www.youtube-nocookie.com/embed/jFlxbPUdfYw?si=mCTdz3vaUj3OIHWh&amp;controls=0",
             },
 			{
                 title: "Out of Jam",
                 desc: "Bir game jam'e katılmaya ve kendi oyununu yapmaya hazır mısın? Out of Jam'de sana verilen sürede oyununu hazırla ve jürilere sun: Kaçıncı olacağını onlar belirleyecek.",
                 features: "Gerçekçi savaş mekaniği ve derin strateji",
                 platforms: "Platform: WebGL",
-				tags: ["Unity", "WebGL", "Clicker", "Casual"]
+				tags: ["Unity", "WebGL", "Clicker", "Casual"],
+				youtube_link: "https://www.youtube-nocookie.com/embed/jFlxbPUdfYw?si=mCTdz3vaUj3OIHWh&amp;controls=0",
             },
 			{
                 title: "Harena",
                 desc: "Kana susamış savaşçılar arasında ölüm kalım mücadelesi. Arenada savaşanlar ya tarih yazar ya da tarih olur. Sen hangisini yapacaksın?",
                 features: "Hızlı oynanış, çeşitli silahlar ve mekanikler",
                 platforms: "Platform: WebGL, Android",
-				tags: ["Unity", "WebGL", "Android", "Hack-and-Slash"]
+				tags: ["Unity", "WebGL", "Android", "Hack-and-Slash"],
+				youtube_link: "https://www.youtube-nocookie.com/embed/jFlxbPUdfYw?si=mCTdz3vaUj3OIHWh&amp;controls=0",
             },
 			{
                 title: "That Last Crater",
                 desc: "Ayda bir kraterin içinde hapsoldun. Canavarlar seni ele geçirmeden ne kadar süre hayatta kalabilirsin?",
                 features: "Gerçekçi savaş mekaniği ve derin strateji",
                 platforms: "Platform: Android",
-				tags: ["Unity", "WebGL", "Korku"]
+				tags: ["Unity", "WebGL", "Korku"],
+				youtube_link: "https://www.youtube-nocookie.com/embed/jFlxbPUdfYw?si=mCTdz3vaUj3OIHWh&amp;controls=0",
             },
         ];
 
@@ -657,6 +664,7 @@
             const features = document.getElementById('game-features');
             const platforms = document.getElementById('game-platforms');
 			const tags = document.getElementById('game-tags');
+			const video = document.getElementById('youtube-video');
 
             title.style.opacity = '0';
             desc.style.opacity = '0';
@@ -674,7 +682,8 @@
 					span.textContent = tagText;
 					tags.appendChild(span);
 				});
-                
+
+				video.src = game.youtube_link;        
                 title.style.transition = 'opacity 0.5s ease';
                 desc.style.transition = 'opacity 0.5s ease';
                 title.style.opacity = '1';
