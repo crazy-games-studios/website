@@ -66,6 +66,11 @@
             letter-spacing: -1px;
         }
 
+		.logo a {
+			text-decoration: none;
+			color: #fff;
+		}
+
         nav {
             display: flex;
             gap: 32px;
@@ -236,6 +241,10 @@
             font-size: 48px;
             margin-bottom: 16px;
         }
+
+		.skill-icon img {
+			height: 64px;
+		}
 
         .skill-title {
             font-size: 20px;
@@ -418,7 +427,6 @@
 
         /* Contact Section */
         .contact-content {
-            max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
@@ -438,6 +446,8 @@
             padding: 32px;
             min-width: 250px;
             transition: all 0.3s ease;
+			text-decoration: none;
+			color: #fff;
         }
 
         .contact-card:hover {
@@ -448,7 +458,12 @@
         .contact-icon {
             font-size: 40px;
             margin-bottom: 16px;
+			height: 48px;
         }
+
+		.contact-icon img {
+			height: 48px;
+		}
 
         .contact-label {
             font-size: 14px;
@@ -537,7 +552,7 @@
     <div class="bg-animation"></div>
 
     <header>
-        <div class="logo">CrazyGames</div>
+        <div class="logo"><a href="/">CrazyGames</a></div>
         <nav>
             <a href="#about">Hakkımda</a>
             <a href="#skills">Yetenekler</a>
@@ -572,19 +587,19 @@
         </div>
         <div class="skills-grid">
             <div class="skill-card">
-                <div class="skill-icon">🎮</div>
+                <div class="skill-icon"><img src="/src/icons/unity.png" alt="Unity Logo"></div>
                 <h3 class="skill-title">Oyun Programlama</h3>
                 <p class="skill-description">Unity ve C# ile oyun geliştirme. Oyun mekanikleri, level design ve optimizasyon konularında deneyimli.</p>
             </div>
 			<div class="skill-card">
-                <div class="skill-icon">🎨</div>
+                <div class="skill-icon"><img src="/src/icons/blender.png" alt="Blender Logo"></div>
                 <h3 class="skill-title">3D Modelleme & Animasyon</h3>
                 <p class="skill-description">Oyun geliştirme sürecinde Blender yazılımını kullanarak 3D modelleme, karakter tasarımı ve animasyon konularında deneyim edindim.</p>
             </div>
             <div class="skill-card">
-                <div class="skill-icon">💻</div>
+                <div class="skill-icon"><img src="/src/icons/fl.png" alt="FL Studio Logo"></div>
                 <h3 class="skill-title">Ses Tasarımı & Müzik Besteleme</h3>
-                <p class="skill-description">FL Studio ile çeşitli SFX tasarımı ve düzenleme deneyimi kazandım. Oyunların akışına ve ruhuna uygun müzik besteledim.</p>
+                <p class="skill-description">FL Studio ile çeşitli SFX tasarımı ve düzenleme deneyimi kazandım. Oyunların akışına ve ruhuna uygun müzikler besteledim.</p>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">🏆</div>
@@ -674,15 +689,20 @@
                 <div class="project-content">
                     <h3 class="project-title">K-9</h3>
                     <p class="project-description">
-                        AÇIKLAMA
+                        Takım arkadaşım Yusuf Taha Özlü ile beraber, Rollic Games oyunlarından ilham alarak geliştirdiğimiz bir mobil hypercasual oyun. Oyunda üstümüze doğru gelen sınırsız sayıdaki zombi sürüsünü öldürerek hayatta kalmaya çalışan bir robotu oynuyoruz.
+						<br/>
+						<br/>
+						Oyunda 4 adet silah, çeşitli yükseltmeler ve daha fazlası mevcut. Demo sürümü itch.io üzerinden oynanabilir, oyunun Android için geliştirme süreci devam ediyor.
                     </p>
                     <div class="project-tags">
-                        <span class="project-tag">Tech 1</span>
-                        <span class="project-tag">Tech 2</span>
+                        <span class="project-tag">Unity</span>
+                        <span class="project-tag">Hypercasual</span>
+                        <span class="project-tag">Endless Runner</span>
+                        <span class="project-tag">Android</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">GitHub</a>
-                        <a href="#" class="project-link">Demo</a>
+                        <a href="https://ironbreaker.itch.io/space-cowboy" class="project-link" target="_blank"><img src="/src/icons/itch.png" alt="itch.io Logo">itch.io</a>
+                        <a href="https://github.com/YeDemirkiran/bullet-hell" class="project-link" target="_blank"><img src="/src/icons/github.png" alt="GitHub Logo">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -782,21 +802,21 @@
         </div>
         <div class="contact-content">
             <div class="contact-methods">
-                <div class="contact-card">
+                <a class="contact-card" href="mailto:yedemirkiran27@gmail.com" target="_blank">
                     <div class="contact-icon">📧</div>
                     <p class="contact-label">Email</p>
-                    <p class="contact-value"><a href="mailto:yedemirkiran27@gmail.com" target="_blank">yedemirkiran27@gmail.com</a></p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">💼</div>
+                    <p class="contact-value">yedemirkiran27@gmail.com</p>
+				</a>
+                <a class="contact-card" a href="https://www.linkedin.com/in/yedemirkiran/" target="_blank">
+                    <div class="contact-icon"><img src="/src/icons/linkedin.png" alt="LinkedIn Logo"></div>
                     <p class="contact-label">LinkedIn</p>
-                    <p class="contact-value"><a href="https://www.linkedin.com/in/yedemirkiran/" target="_blank">Yaşam Ensar Demirkıran</a></p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">🐙</div>
+                    <p class="contact-value">Yaşam Ensar Demirkıran</p>
+				</a>
+                <a class="contact-card" href="https://github.com/YeDemirkiran" target="_blank">
+                    <img class="contact-icon" src="/src/icons/github.png" alt="GitHub Logo">
                     <p class="contact-label">GitHub</p>
-                    <p class="contact-value"><a href="https://github.com/YeDemirkiran" target="_blank"></a>@YeDemirkiran</p>
-                </div>
+                    <p class="contact-value">@YeDemirkiran</p>
+				</a>
             </div>
         </div>
     </section>
