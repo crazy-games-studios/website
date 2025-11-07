@@ -320,12 +320,11 @@
         }
 
         /* Projects Section */
-/* Projects Section */
         .projects-grid {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 32px;
         }
 
@@ -562,6 +561,7 @@
 
             .projects-grid {
                 grid-template-columns: 1fr;
+                max-width: 100%;
             }
         }
     </style>
@@ -700,83 +700,97 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-header">
-      <h2 class="section-title">Projeler</h2>
-      <p class="section-subtitle">Geliştirdiğim oyunlar ve uygulamalar</p>
-      <div class="projects-button-container">
-    <a href="index.html" class="project-button">🎮 Oyun Videolarımız</a>
-  </div>
-
-    </div>
-		<div class="project-card">
-			<div class="project-image"><img src="src/game-thumbnails/infestation.png"></div>
-			<div class="project-content">
-				<h3 class="project-title">Infestation</h3>
-				<p class="project-description">
-					İrfan Kerem Arslan ile birlikte, Yaşam Ensar Demirkıran’ın destekleriyle geliştirdiğimiz bir oyun. Bu oyunda, dünyayı istila etmeye çalışan bir robotu durdurmak isteyen insanları yenmeye çalışıyoruz. Bunun için Tower’ını koruman gerekiyor. Silah ve Tower gibi objeleri geliştirebildiğin oyun mekaniğine sahip, geliştirme aşamasında olan bir proje. İyi oyunlar.
-				</p>
-				<div class="project-tags">
-					<span class="project-tag">Unity</span>
-					<span class="project-tag">Hypercasual</span>
-					<!-- <span class="project-tag">Endless Runner</span> -->
-					<span class="project-tag">Android</span>
-				</div>
-				<div class="project-links">
-					<a href="https://ironbreaker.itch.io/infestation" class="project-link" target="_blank"><img src="src/icons/itch.png" alt="itch.io Logo">itch.io</a>
-					<a href="https://github.com/muyilma/infestation/tree/master" class="project-link" target="_blank"><img src="src/icons/github.png" alt="GitHub Logo">GitHub</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="project-card">
-		<div class="project-image">
-			<img src="src/game-thumbnails/solongkerem.png" alt="so_long oyun ekran görüntüsü" loading="lazy">
-		</div>
-		<div class="project-content">
-			<h3 class="project-title">so_long (42)</h3>
-			<p class="project-description">
-			C &amp; MiniLibX ile 2D tile-tabanlı oyun. <code>.ber</code> harita parser, duvar/boşluk doğrulaması için flood-fill,
-			toplanabilir objeler (C), çıkış kapısı (E) ve geçilebilirlik kontrolü. Bonus: animasyonlar, hareketli engeller ve basit UI.
-			</p>
-			<div class="project-tags">
-			<span class="project-tag">C</span>
-			<span class="project-tag">MiniLibX</span>
-			<span class="project-tag">2D Game</span>
-			<span class="project-tag">Map Parser</span>
-			</div>
-			<div class="project-links">
-			<a href="https://github.com/ifrankerem" target="_blank" class="project-link">GitHub</a>
-			</div>
-		</div>
-		</div>
-	<div class="project-card">
-  <div class="project-image">
-    <img src="src/game-thumbnails/cub3dkerem.png" alt="Cub3D raycasting ekran görüntüsü" loading="lazy">
-  </div>
-  <div class="project-content">
-    <h3 class="project-title">Cub3D (Raycasting) — <span style="color:#ffcc00;">Yapım Aşamasında</span></h3>
-    <p class="project-description">
-      C &amp; MiniLibX ile Wolf3D tarzı raycasting motoru: DDA algoritması ile duvar bulma, dikey şerit çizimi,
-      texture mapping, FOV ve kamera düzlemi hesaplama, <code>.cub</code> başlık ve harita parser sistemi.
-      Şu anda <b>render optimizasyonu</b> ve <b>duvar çarpışma sistemi</b> geliştiriliyor.
-    </p>
-    <div class="project-tags">
-      <span class="project-tag">C</span>
-      <span class="project-tag">MiniLibX</span>
-      <span class="project-tag">Raycasting</span>
-      <span class="project-tag">DDA</span>
-      <span class="project-tag">Textures</span>
-      <span class="project-tag">In Progress</span>
-    </div>
-    <div class="project-links">
-      <a href="https://github.com/ifrankerem" target="_blank" class="project-link">GitHub</a>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header">
+    <h2 class="section-title">Projeler</h2>
+    <p class="section-subtitle">Geliştirdiğim oyunlar ve uygulamalar</p>
+    <div class="projects-button-container">
+      <a href="index.html" class="project-button">🎮 Oyun Videolarımız</a>
     </div>
   </div>
-</div>
 
-  </section>
+  <!-- ✅ GRID BAŞLANGICI -->
+  <div class="projects-grid">
+
+    <!-- INFESTATION -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="src/game-thumbnails/infestation.png" alt="Infestation oyun görseli">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Infestation</h3>
+        <p class="project-description">
+          İrfan Kerem Arslan ile birlikte, Yaşam Ensar Demirkıran’ın destekleriyle geliştirdiğimiz bir oyun.
+          Bu oyunda, dünyayı istila etmeye çalışan bir robotu durdurmak isteyen insanları yenmeye çalışıyoruz.
+          Tower’ını koruman gerekiyor. Silah ve Tower gibi objeleri geliştirebildiğin, hâlen geliştirme aşamasında olan bir proje.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Unity</span>
+          <span class="project-tag">Hypercasual</span>
+          <span class="project-tag">Android</span>
+        </div>
+        <div class="project-links">
+          <a href="https://ironbreaker.itch.io/infestation" class="project-link" target="_blank"><img src="src/icons/itch.png" alt="itch.io Logo">itch.io</a>
+          <a href="https://github.com/muyilma/infestation/tree/master" class="project-link" target="_blank"><img src="src/icons/github.png" alt="GitHub Logo">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SO_LONG -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="src/game-thumbnails/solongkerem.png" alt="so_long oyun ekran görüntüsü" loading="lazy">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">so_long (42)</h3>
+        <p class="project-description">
+          C &amp; MiniLibX ile 2D tile-tabanlı oyun. <code>.ber</code> harita parser, duvar/boşluk doğrulaması için flood-fill,
+          toplanabilir objeler (C), çıkış kapısı (E) ve geçilebilirlik kontrolü. Bonus: animasyonlar, hareketli engeller ve basit UI.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">C</span>
+          <span class="project-tag">MiniLibX</span>
+          <span class="project-tag">2D Game</span>
+          <span class="project-tag">Map Parser</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/ifrankerem/So_Long" target="_blank" class="project-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CUB3D -->
+    <div class="project-card">
+      <div class="project-image">
+        <img src="src/game-thumbnails/cub3dkerem.png" alt="Cub3D raycasting ekran görüntüsü" loading="lazy">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Cub3D (Raycasting) — <span style="color:#ffcc00;">Yapım Aşamasında</span></h3>
+        <p class="project-description">
+          C &amp; MiniLibX ile Wolf3D tarzı raycasting motoru: DDA algoritması ile duvar bulma, dikey şerit çizimi,
+          texture mapping, FOV ve kamera düzlemi hesaplama, <code>.cub</code> başlık ve harita parser sistemi.
+          Şu anda <b>render optimizasyonu</b> ve <b>duvar çarpışma sistemi</b> geliştiriliyor.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">C</span>
+          <span class="project-tag">MiniLibX</span>
+          <span class="project-tag">Raycasting</span>
+          <span class="project-tag">DDA</span>
+          <span class="project-tag">Textures</span>
+          <span class="project-tag">In Progress</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/ifrankerem/cub3d" target="_blank" class="project-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- ✅ GRID SONU -->
+
+</section>
+
 <section id="contact">
         <div class="section-header">
             <h2 class="section-title">İletişim</h2>
