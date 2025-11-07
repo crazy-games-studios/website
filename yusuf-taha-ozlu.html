@@ -351,6 +351,19 @@
             justify-content: center;
             font-size: 64px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-image img[src=""],
+        .project-image img:not([src]) {
+            display: none;
         }
 
         .project-content {
@@ -642,14 +655,15 @@
                 </div>
             </div>
             <div class="achievement-card">
-                <div class="achievement-medal">🏆</div>
+                <div class="achievement-medal">🎮</div>
                 <div class="achievement-content">
-                    <h3>42 Türkiye - Piscine Bootcamp</h3>
-                    <p class="achievement-event">Intensive Programming Bootcamp</p>
+                    <h3>Kodluyoruz - Hi-Kod Oyun Geliştirme Atölyesi</h3>
+                    <p class="achievement-event">Oyun Geliştirme Eğitimi | Aralık 2022 - Ocak 2023</p>
                     <p class="achievement-description">
-                        42 Türkiye'nin yoğun Piscine Bootcamp'ini başarıyla tamamlayarak ana eğitim programına 
-                        (common core) geçiş yaptım. Bu süreçte algoritmalar, veri yapıları ve sistem geliştirme 
-                        konularında hands-on deneyim kazandım.
+                        EMpower desteğiyle hazırlanan Kodluyoruz tarafından sunulan Hi-Kod Oyun Geliştirme Atölyesi'ne 
+                        katıldım ve başarıyla tamamladım. Bu atölyede oyun geliştirme temelleri, oyun tasarımı prensipleri 
+                        ve pratik proje geliştirme konularında kapsamlı eğitim aldım. Oyun geliştirme kariyerime 
+                        yön veren önemli bir deneyim oldu.
                     </p>
                 </div>
             </div>
@@ -678,7 +692,9 @@
         </div>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image">🎮</div>
+                <div class="project-image">
+                    <img src="src/game-thumbnails/soLong.png" alt="So_Long Game Screenshot">
+                </div>
                 <div class="project-content">
                     <h3 class="project-title">So_Long</h3>
                     <p class="project-description">
@@ -699,14 +715,16 @@
             </div>
 
             <div class="project-card">
-                <div class="project-image">🌐</div>
+                <div class="project-image">
+                    <img src="src/game-thumbnails/minirt.png" alt="minirt Ray Tracing Project">
+                </div>
                 <div class="project-content">
                     <h3 class="project-title">minirt</h3>
                     <p class="project-description">
                         Mustafa Ersin Şişman ile birlikte geliştirdiğimiz bir ray tracing projesi. 42 İstanbul 
-                        kampüsünde Ecole 42 School'un eğitim programı kapsamında yapıldı. Temel ray tracing 
-                        metodlarını öğrenmek ve uygulamak için geliştirildi. 3D görselleştirme ve ışık hesaplamaları 
-                        konularında deneyim kazandık.
+                        kampüsünde Ecole 42 School'un eğitim programı kapsamında yapılıyor. Temel ray tracing 
+                        metodlarını öğrenmek ve uygulamak için geliştirilen bu proje şu anda yapım aşamasındadır. 
+                        3D görselleştirme ve ışık hesaplamaları konularında deneyim kazanıyoruz.
                     </p>
                     <div class="project-tags">
                         <span class="project-tag">C</span>
@@ -721,9 +739,11 @@
             </div>
 
             <div class="project-card">
-                <div class="project-image">💥</div>
+                <div class="project-image">
+                    <img src="src/game-thumbnails/game.png" alt="Laser-Z Game Screenshot">
+                </div>
                 <div class="project-content">
-                    <h3 class="project-title">Bullet Hell</h3>
+                    <h3 class="project-title">Laser-Z</h3>
                     <p class="project-description">
                         Yaşam Ensar Demirkıran ile birlikte geliştirdiğimiz bullet hell temalı bir oyun. 
                         Oyun tasarımı ve mekaniklerini ben, programlamasını ise ekip arkadaşım yaptı. 
@@ -755,7 +775,7 @@
                     <p class="contact-label">Email</p>
                     <p class="contact-value">yusuftahaozlu@gmail.com</p>
 				</a>
-                <a class="contact-card" a href="https://www.linkedin.com/in/yusuf-taha-ozlu" target="_blank">
+                <a class="contact-card" href="https://www.linkedin.com/in/yusuf-taha-özlü-2ab331244" target="_blank">
                     <div class="contact-icon"><img src="src/icons/linkedin.png" alt="LinkedIn Logo"></div>
                     <p class="contact-label">LinkedIn</p>
                     <p class="contact-value">Yusuf Taha Özlü</p>
