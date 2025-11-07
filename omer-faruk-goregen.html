@@ -249,6 +249,10 @@
             margin-bottom: 16px;
         }
 
+		.skill-icon img {
+			height: 64px;
+		}
+
         .skill-title {
             font-size: 20px;
             font-weight: 700;
@@ -353,6 +357,12 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+		.project-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: fill;
+		}
+
         .project-content {
             padding: 32px;
         }
@@ -387,11 +397,13 @@
 
         .project-links {
             display: flex;
-            gap: 12px;
+            justify-content: flex-start;
+			gap: 12px;
+			width: 100%;
         }
 
         .project-link {
-            padding: 10px 20px;
+            padding: 10px 10px;
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 8px;
@@ -400,7 +412,20 @@
             font-size: 14px;
             font-weight: 600;
             transition: all 0.3s ease;
+
+			display: flex;
+			justify-content: start;
+			align-items: center;
+
+			text-align: center;	
         }
+
+		.project-link img {
+			width: 16px;
+			aspect-ratio: 1 / 1	;
+			display: inline-block;
+			margin-right: 5%;
+		}
 
         .project-link:hover {
             background: rgba(255, 255, 255, 0.2);
@@ -409,7 +434,6 @@
 
         /* Contact Section */
         .contact-content {
-            max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
@@ -429,6 +453,8 @@
             padding: 32px;
             min-width: 250px;
             transition: all 0.3s ease;
+			text-decoration: none;
+			color: #fff;
         }
 
         .contact-card:hover {
@@ -439,7 +465,12 @@
         .contact-icon {
             font-size: 40px;
             margin-bottom: 16px;
+			height: 48px;
         }
+
+		.contact-icon img {
+			height: 48px;
+		}
 
         .contact-label {
             font-size: 14px;
@@ -638,7 +669,7 @@
         </div>
         <div class="projects-grid">
     <div class="project-card">
-        <div class="project-image">💀</div>
+        <div class="project-image"><img src="src/game-thumbnails/Skeleton Survivors.png" alt="Ultra-Pong! Thumbnail"></div>
         <div class="project-content">
             <h3 class="project-title">Skeleton Survivors</h3>
             <p class="project-description">
@@ -659,7 +690,28 @@
     </div>
 
     <div class="project-card">
-        <div class="project-image"><img src="src/4mizac.png" alt="4 Mizaç"></div>
+                <div class="project-image">🎮</div>
+                <div class="project-content">
+                    <h3 class="project-title">So_Long</h3>
+                    <p class="project-description">
+                        MLX grafik kütüphanesi kullanılarak geliştirilmiş basit bir 2D oyun. Oyuncu haritada hareket eder, 
+                        eşyaları toplar ve çıkışa ulaşır. Bu proje, 2D grafik programlama, event-driven programming, 
+                        harita parsing ve oyun geliştirme temellerini öğrenmek için yapıldı.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">C</span>
+                        <span class="project-tag">MLX</span>
+                        <span class="project-tag">2D Game</span>
+                        <span class="project-tag">42 Project</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yuusftaha/So_Long" class="project-link" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+    <div class="project-card">
+        <div class="project-image"><img src="src/game-thumbnails/4mizac.png" alt="Ultra-Pong! Thumbnail"></div>
         <div class="project-content">
             <h3 class="project-title">4 Mizaç Web Platformu</h3>
             <p class="project-description">

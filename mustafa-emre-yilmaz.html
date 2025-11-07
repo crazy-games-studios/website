@@ -320,6 +320,7 @@
         }
 
         /* Projects Section */
+/* Projects Section */
         .projects-grid {
             max-width: 1200px;
             margin: 0 auto;
@@ -352,6 +353,12 @@
             font-size: 64px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
+
+		.project-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: fill;
+		}
 
         .project-content {
             padding: 32px;
@@ -387,11 +394,13 @@
 
         .project-links {
             display: flex;
-            gap: 12px;
+            justify-content: flex-start;
+			gap: 12px;
+			width: 100%;
         }
 
         .project-link {
-            padding: 10px 20px;
+            padding: 10px 10px;
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 8px;
@@ -400,7 +409,20 @@
             font-size: 14px;
             font-weight: 600;
             transition: all 0.3s ease;
+
+			display: flex;
+			justify-content: start;
+			align-items: center;
+
+			text-align: center;	
         }
+
+		.project-link img {
+			width: 16px;
+			aspect-ratio: 1 / 1	;
+			display: inline-block;
+			margin-right: 5%;
+		}
 
         .project-link:hover {
             background: rgba(255, 255, 255, 0.2);
@@ -409,7 +431,6 @@
 
         /* Contact Section */
         .contact-content {
-            max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
@@ -429,6 +450,8 @@
             padding: 32px;
             min-width: 250px;
             transition: all 0.3s ease;
+			text-decoration: none;
+			color: #fff;
         }
 
         .contact-card:hover {
@@ -439,7 +462,12 @@
         .contact-icon {
             font-size: 40px;
             margin-bottom: 16px;
+			height: 48px;
         }
+
+		.contact-icon img {
+			height: 48px;
+		}
 
         .contact-label {
             font-size: 14px;
@@ -451,7 +479,6 @@
             font-size: 16px;
             font-weight: 600;
         }
-
         /* Footer */
         footer {
             position: relative;
@@ -546,7 +573,7 @@
             <h1 class="hero-title">Mustafa Emre Yılmaz</h1>
             <p class="hero-subtitle">UI/UX Designer & Game Developer</p>
             <p class="hero-description">
-                Kullanıcı deneyimini ön planda tutan tasarımlar ve oyun geliştirme konusunda tutkulu bir profesyonel. 
+                Kullanıcı deneyimini ön planda tutan tasarımlar ve oyun geliştirme konusunda tutkulu bir yazılımcı. 
                 Hackathon kazananı ve competitive programming yarışmalarında takım liderliği deneyimi.
             </p>
             <div class="cta-buttons">
@@ -565,17 +592,17 @@
             <div class="skill-card">
                 <div class="skill-icon">🎨</div>
                 <h3 class="skill-title">UI/UX Design</h3>
-                <p class="skill-description">Kullanıcı odaklı, modern ve işlevsel arayüz tasarımları. Figma, Adobe XD ve prototyping araçlarında deneyimli.</p>
+                <p class="skill-description">Kullanıcı odaklı, modern ve işlevsel arayüz tasarımları. Figma ve Adobe Photoshop araçlarında deneyimli.</p>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">🎮</div>
                 <h3 class="skill-title">Game Development</h3>
-                <p class="skill-description">Unity ve Unreal Engine ile oyun geliştirme. Gameplay mechanics, level design ve optimization konularında deneyimli.</p>
+                <p class="skill-description">Unity ile oyun geliştirme. Gameplay mechanics, animasyon ve layer mask konularında deneyimli.</p>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">💻</div>
                 <h3 class="skill-title">Programming</h3>
-                <p class="skill-description">C#, C++, Python ve JavaScript ile geliştirme. Algorithm design ve competitive programming deneyimi.</p>
+                <p class="skill-description">C, C# ve C++ ile yazılım geliştirme. Html-CSS ve javaScript ile web geliştirme. Algorithm design ve competitive programming deneyimi.</p>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">🏆</div>
@@ -594,11 +621,10 @@
             <div class="achievement-card">
                 <div class="achievement-medal">🥇</div>
                 <div class="achievement-content">
-                    <h3>1. Yer - Sui Hackathon</h3>
+                    <h3>1. Derece - Sui Hackathon</h3>
                     <p class="achievement-event">Blockchain & Web3 Hackathon</p>
                     <p class="achievement-description">
-                        Sui blockchain üzerinde geliştirdiğimiz innovative proje ile hackathon'da birinci oldum. 
-                        Proje, kullanıcı deneyimini ön planda tutan bir yaklaşımla Web3 teknolojilerini birleştiriyor.
+                        Sui blockchain üzerinde geliştirdiğimiz yenilikçi proje ile hackathon’da birinci olduk. Bu etkinlikte Linker benzeri bir sistemi blockchain tabanlı yeniden tasarlayıp, kendi mimarimizi ve uygulamamızı geliştirerek sunduk.
                     </p>
                 </div>
             </div>
@@ -606,11 +632,10 @@
             <div class="achievement-card">
                 <div class="achievement-medal">6️⃣</div>
                 <div class="achievement-content">
-                    <h3>6. Yer - CodinGame Spring Challenge 2025</h3>
+                    <h3>6. Derece - CodinGame Spring Challenge 2025</h3>
                     <p class="achievement-event">Takım Sıralaması - 100+ Okul Katılımı</p>
                     <p class="achievement-description">
-                        Yüzlerce okul arasından takım olarak 6. sırada yer aldık. Algorithm optimization ve 
-                        stratejik düşünme becerilerimizi konuşturduğumuz zorlu bir yarışma oldu.
+                        Yüzlerce okul arasından takım olarak 6. olduk. Yarışma, 3x3'lük bir tahtada oynanan oyunda oluşabilecek tüm durumları hesaplayıp toplayan programı en düşük sürede çalıştırmayı hedefliyordu; bizim takım bu alanda dereceye girdi.
                     </p>
                 </div>
             </div>
@@ -618,11 +643,10 @@
             <div class="achievement-card">
                 <div class="achievement-medal">5️⃣</div>
                 <div class="achievement-content">
-                    <h3>5. Yer - CodinGame Summer Challenge 2025</h3>
+                    <h3>5. Derece - CodinGame Summer Challenge 2025</h3>
                     <p class="achievement-event">Takım Sıralaması - 100+ Okul Katılımı</p>
                     <p class="achievement-description">
-                        Spring Challenge'daki başarımızı Summer Challenge'da da sürdürerek 5. sıraya yükseldik. 
-                        Takım koordinasyonu ve code efficiency konusunda daha da geliştiğimiz bir deneyim.
+                        Spring Challenge’daki başarımızı Summer Challenge’da da sürdürerek 5. sıraya yükseldik. Yarışmada iki taraf vardı: bizim takım ve rakip yapay zeka. Amaç, karşı yapay zekayı yenebilen en optimal botu geliştirmekti. Haritada karakter için en verimli pozisyonu bulabilen, düşman mesafesine göre ateş edebilen, bomba atabilen ve alan kontrolü yapabilen çok aşamalı davranış sistemine sahip bir bot yazdık. Son olarak diğer yarışmacılarla botlarımızı karşılaştırarak test ettik ve performansa göre sıralama aldık.
                     </p>
                 </div>
             </div>
@@ -635,58 +659,42 @@
             <p class="section-subtitle">Geliştirdiğim oyunlar ve uygulamalar</p>
         </div>
         <div class="projects-grid">
+            <!-- Daha fazla proje kartı eklenebilir -->
             <div class="project-card">
-                <div class="project-image">🎮</div>
+                <div class="project-image"><img src="src/game-thumbnails/infestation.png"></div>
                 <div class="project-content">
                     <h3 class="project-title">Infestation</h3>
                     <p class="project-description">
-                        [BURAYA OYUN HAKKINDA AÇIKLAMA EKLE - Oyunun konusu, mekanikleri, öne çıkan özellikleri]
+                        İrfan Kerem Arslan ile birlikte, Yaşam Ensar Demirkıran’ın destekleriyle geliştirdiğimiz bir oyun. Bu oyunda, dünyayı istila etmeye çalışan bir robotu durdurmak isteyen insanları yenmeye çalışıyoruz. Bunun için Tower’ını koruman gerekiyor. Silah ve Tower gibi objeleri geliştirebildiğin oyun mekaniğine sahip, geliştirme aşamasında olan bir proje. İyi oyunlar.
                     </p>
                     <div class="project-tags">
                         <span class="project-tag">Unity</span>
-                        <span class="project-tag">C#</span>
-                        <span class="project-tag">Game Design</span>
+                        <span class="project-tag">Hypercasual</span>
+                        <!-- <span class="project-tag">Endless Runner</span> -->
+                        <span class="project-tag">Android</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/muyilma/infestation/tree/master" class="project-link" target="_blank">GitHub</a>
-                        <a href="#" class="project-link">Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Daha fazla proje kartı eklenebilir -->
-            <div class="project-card">
-                <div class="project-image">🚀</div>
-                <div class="project-content">
-                    <h3 class="project-title">Proje 2</h3>
-                    <p class="project-description">
-                        [BURAYA İKİNCİ PROJENİN AÇIKLAMASINI EKLE]
-                    </p>
-                    <div class="project-tags">
-                        <span class="project-tag">Tech 1</span>
-                        <span class="project-tag">Tech 2</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">GitHub</a>
-                        <a href="#" class="project-link">Demo</a>
+                        <a href="https://ironbreaker.itch.io/infestation" class="project-link" target="_blank"><img src="src/icons/itch.png" alt="itch.io Logo">itch.io</a>
+                        <a href="https://github.com/muyilma/infestation/tree/master" class="project-link" target="_blank"><img src="src/icons/github.png" alt="GitHub Logo">GitHub</a>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
-                <div class="project-image">💡</div>
+                <div class="project-image"><img src="src/game-thumbnails/soLong.png"></div>
                 <div class="project-content">
-                    <h3 class="project-title">Proje 3</h3>
+                    <h3 class="project-title">Dark Dungeon</h3>
                     <p class="project-description">
-                        [BURAYA ÜÇÜNCÜ PROJENİN AÇIKLAMASINI EKLE]
+                    Dark Dungeon, bana oyun geliştirmenin temel mantığını öğreten bir projeydi. Harita doğrulama, hareket kontrolleri, çarpışma ve erişilebilirlik gibi süreçler kod içinde ayrı modüller halinde yönetiliyor. Grafik işlemleri için miniLibX kullanılıyor ve her texture oyun dünyasında bir sprite olarak işleniyor. Oyunun temel amacı; doğru oluşturulmuş bir harita üzerinde oyuncunun doğru akışta oyunu tamamlayabileceği stabil bir oyun döngüsü oluşturmaktır.
                     </p>
                     <div class="project-tags">
-                        <span class="project-tag">Tech 1</span>
-                        <span class="project-tag">Tech 2</span>
+                        <span class="project-tag">C</span>
+                        <span class="project-tag">miniLibX</span>
+                        <span class="project-tag">2DGame</span>
+                        <span class="project-tag">PixelArt</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">GitHub</a>
-                        <a href="#" class="project-link">Demo</a>
+                        <a href="https://github.com/muyilma/so_long" class="project-link" target="_blank"><img src="src/icons/github.png" alt="GitHub Logo">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -700,21 +708,21 @@
         </div>
         <div class="contact-content">
             <div class="contact-methods">
-                <div class="contact-card">
+              <a class="contact-card" target="_blank">
                     <div class="contact-icon">📧</div>
                     <p class="contact-label">Email</p>
-                    <p class="contact-value">[EMAIL ADRESİNİ EKLE]</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">💼</div>
+                    <p class="contact-value">mustafaemreyilmz@gmail.com</p>
+				</a>
+                 <a class="contact-card" a href="https://www.linkedin.com/in/mustafa-emre-yilmaz-29422a291/" target="_blank">
+                    <div class="contact-icon"><img src="src/icons/linkedin.png" alt="LinkedIn Logo"></div>
                     <p class="contact-label">LinkedIn</p>
-                    <p class="contact-value">[LINKEDIN PROFİLİNİ EKLE]</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">🐙</div>
+                    <p class="contact-value">Mustafa Emre Yılmaz</p>
+				</a>
+                 <a class="contact-card" href="https://github.com/muyilma" target="_blank">
+                    <img class="contact-icon" src="src/icons/github.png" alt="GitHub Logo">
                     <p class="contact-label">GitHub</p>
                     <p class="contact-value">@muyilma</p>
-                </div>
+				</a>
             </div>
         </div>
     </section>
